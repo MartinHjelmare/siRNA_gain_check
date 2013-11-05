@@ -41,4 +41,4 @@ for seq in sequences:
                     channel_results = add_gain(lut.attrib['LutName'], channel_results, detector)
 # Counts how many values of each gain, each channel has, in a histogram fashion. Prints histogram from the Counter object.
 for channel in channel_results:
-    print(channel+": "+str(Counter(channel_results[channel]).items()))
+    print(channel+": "+str(sorted(Counter(channel_results[channel]).items())))
